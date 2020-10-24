@@ -14,6 +14,61 @@ string rtrim(const string &);
 
 vector<int> gradingStudents(vector<int> grades) {
 
+    vector<int> roundedgrades;
+    int g=0;
+    for(int i:grades)
+    {
+        if(i<38)
+        {
+            roundedgrades.push_back(i);
+        }
+        else
+        {
+            int m=i%10;
+            if(m>=8)
+            {
+                if(m+1==10)
+                {
+                    g=i+1;
+                }
+                else if(m+2==10)
+                {
+                    g=i+2;
+                }
+                else if(m+3==10)
+                {
+                    g=i+3;
+                }
+
+                roundedgrades.push_back(g);
+            }
+            else if(m>2 && m<5)
+            {
+                if(m+1==5)
+                {
+                    g=i+1;
+                }
+                else if(m+2==5)
+                {
+                    g=i+2;
+                }
+                else if(m+3==5)
+                {
+                    g=i+3;
+                }
+
+                roundedgrades.push_back(g);
+            }
+            else
+            {
+                roudedgrades.push_back(i);
+            }
+            
+        }
+        
+    }
+
+    return roundedgrades;
 }
 
 int main()
