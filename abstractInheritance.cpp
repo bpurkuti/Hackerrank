@@ -38,29 +38,17 @@ class Book{
 
 class MyBook:Book{
     protected:
-    string t,a;
-    int p;
+    int price;
     public:
-    MyBook(string t, string a, int p):Book(t,a){
-        this->t=t;
-        this->a=a;
-        this->p=p;
+    MyBook(string title, string author, int price):Book(title,author){
+        this->price=price;
     }
     
     void display(){
-        cout<<"Title: "<<t<<endl;
-        cout<<"Author: "<<a<<endl;
-        cout<<"Price: "<<p<<endl;
+        cout<<"Title: "<<Book::title<<endl;
+        cout<<"Author: "<<Book::author<<endl;
+        cout<<"Price: "<<price<<endl;
     }
 };
 
 int main() {
-    string title,author;
-    int price;
-    getline(cin,title);
-    getline(cin,author);
-    cin>>price;
-    MyBook novel(title,author,price);
-    novel.display();
-    return 0;
-}
