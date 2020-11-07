@@ -1,0 +1,52 @@
+#include <map>
+#include <set>
+#include <list>
+#include <cmath>
+#include <ctime>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <string>
+#include <bitset>
+#include <cstdio>
+#include <limits>
+#include <vector>
+#include <climits>
+#include <cstring>
+#include <cstdlib>
+#include <fstream>
+#include <numeric>
+#include <sstream>
+#include <iostream>
+#include <algorithm>
+#include <unordered_map>
+
+using namespace std;
+
+
+int main(){
+    string S;
+    cin >> S;
+    try{
+        int a = stoi(S);
+        cout<<a<<endl;
+    }
+    catch(invalid_argument)
+    {
+        cout<<"Bad String"<<endl;
+    }
+    return 0;
+}
+
+// #!/bin/python3
+
+// import sys
+
+
+// S = input().strip()
+// try:
+//     int(S)
+//     print(S)
+// except ValueError:
+//     print("Bad String")
+    
